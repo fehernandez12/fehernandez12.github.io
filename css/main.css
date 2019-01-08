@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: "Raleway", Helvetica, Arial, sans-serif line-height: 20px;
+    color: #999999;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+}
+
+.animated {
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    line-height: 20px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navbar {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 0px;
+    border: 0px;
+    border-radius: 0px;
+}
+
+.navbar-default {
+    background-color: transparent;
+    padding: 20px 0;
+    transition: all 0.3s;
+    border: 0px;
+}
+
+.top-nav-collapse {
+    padding: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(251, 251, 251, 0.4);
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(231, 76, 60, 0.4);
+}
+
+#banner {
+    background: url('../images/code.jpg') no-repeat fixed;
+    background-size: cover;
+    min-height: 850px;
+    position: relative;
+}
+
+.bg-color {
+    background-color: RGBA(54, 70, 83, 0.5);
+    min-height: 850px;
+}
+
+.banner-info {
+    padding-top: 190px;
+}
+
+.banner-logo img {
+    display: inline-block;
+}
+
+.banner-text {
+    color: #fff;
+}
+
+.banner-text h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.circular-img {
+    height: 50vw;
+    width: 50vw;
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    border: 5px solid #cfd8dc;
+    transition: 0.2s;
+    animation: appear 0.4s 0.5s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+.circular-img:hover {
+    opacity: 0.8;
+}
+
+.main-circular-img {
+    height: 75vw;
+    width: 75vw;
+    max-height: 250px;
+    max-width: 250px;
+    border: 2.5px solid #FFF;
+}
+
+#header-text {
+    font-size: 62px;
+    font-family: 'Varela Round', sans-serif;
+    text-shadow: 1px 1.5px #a0a0a0;
+}
+
+#header-subtitle {
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#section-title {
+    font-size: 36px;
+}
+
+.project-item {
+    box-shadow: 0 2px 12px 0 white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.project-container {
+    padding: 0 16px;
+}
+
+.project-container h1 {
+    font-weight: bold;
+}
+
+.orange-link:hover {
+    color: rgb(255, 183, 55);
+}
+
+.project-type {
+    font-size: 14px;
+}
+
+.project-title {
+    color: grey;
+    font-size: 18px;
+}
+
+.fa-twitter:hover {
+    color: #55acee;
+}
+
+.fa-globe:hover {
+    color: #007bb5;
+}
+
+.github-icon:before {
+    content: "\f09b";
+}
+
+.github-icon:hover {
+    color: #000;
+}
+
+.discord-icon {
+    width: 22px;
+    height: 22px;
+    border: 0;
+}
+
+.contact-btn,
+.contact-btn:hover,
+.contact-btn:focus {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: rgba(255, 183, 55, 0.9);
+    border-radius: 3px;
+    font-weight: bold;
+    color: #FFF;
+    display: inline-block;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 980px) {}
+
+@media (min-width: 220px) and (max-width: 551px) {
+    h2 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    .banner-text h1 {
+        font-size: 24px;
+    }
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.custom-contact-icon {
+    width: 35px;
+    height: 35px;
+    border: 0;
+}
+
+#about {
+    padding: 60px 0px;
+    background-color: #2C2F33;
+}
+
+#projects {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #36393E;
+}
+
+#contact {
+    padding: 60px 0px;
+    background-color: #36393E;
+}
+
+#footer {
+    background-color: #2C2F33;
+}
+
+.footer-line {
+    font-family: 'Cutive Mono', monospace;
+    padding: 30px 0px;
+    color: #fff;
+}
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: rgba(76, 76, 76, 0.65);
+    border-color: transparent;
+}
+
+.back-to-top:hover {
+    background-color: rgba(76, 76, 76, 0.85);
+}
+
+.back-to-top:active,
+.back-to-top:focus,
+.back-to-top:visited {
+    background-color: rgba(76, 76, 76, 0.65);
+}
