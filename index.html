@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+<!--
+  Created by fehernandez12 - 2019
+  -*Read LICENSE to know more about permissions*-
+-->
 
 <head>
     <meta charset="UTF-8" />
@@ -7,210 +11,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Felipe Hernández | Home</title>
-    <meta name="author" content="Felipe Hernandez" />
-    <meta name="description" content="Personal Webpage" />
+    <meta name="author" content="fehernandez12" />
+    <meta name="description" content="Hobbyist Developer. A personal website to showcase some info." />
+    <meta name="keywords" content="developer, dev, web, javascript, discord, bots, nodejs" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Felipe Hernández" />
-    <meta property="og:description" content="Personal Webpage" />
-    <meta property="og:image" content="images/lion.jpg" />
-    <meta property="og:site_name" content="FH" />
-    <meta property="og:url" content="" />
+    <meta property="og:title" content="fehernandez12" />
+    <meta property="og:description" content="Hobbyist Developer. A personal website to showcase some info." />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:site_name" content="TRLCS" />
+    <meta property="og:url" content="https://trlcs.com/" />
     <meta property="og:locale" content="en-US" />
 
-    <meta name="twitter:title" content="Felipe Hernández" />
-    <meta name="twitter:description" content="Personal Webpage" />
-    <meta name="twitter:image" content="images/neko.png" />
+    <meta name="twitter:title" content="fehernandez12" />
+    <meta name="twitter:description" content="Hobbyist Developer. A personal website to showcase some info." />
+    <meta name="twitter:image" content="images/logo.png" />
 
-    <link rel="icon" href="images/neko.png" type="image/x-icon" />
-    <link rel="shortcut icon" href="images/neko.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|Oswald|Raleway:300|Yellowtail" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="60">
-    <section id="banner" class="banner">
-        <div class="bg-color">
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="col-md-12">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="mainNavbar">
-                            <ul class="nav navbar-nav">
-                                <li class=""><a href="#about"><i class="fa fa-question-circle"></i> About</a></li>
-                                <li class=""><a href="#skills"><i class="fa fa-star"></i> Skills</a></li>
-                                <li class=""><a href="#projects"><i class="fa fa-terminal"></i> Projects</a></li>
-                                <li class=""><a href="#contact"><i class="fa fa-send"></i> Contact</a></li>
-                                <li><a id="social-link" href="https://github.com/fehernandez12" target="_blank"><i class="fa fa-github"></i> Github</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <div class="container">
-                <div class="row">
-                    <div class="banner-info">
-                        <div class="banner-logo text-center">
-                            <img class="circular-img main-circular-img animated fadeIn" src="images/neko.png" alt="TRL">
-                        </div>
-                        <div class="banner-text text-center">
-                            <h1 id="header-text" class="animated fadeInUp">Felipe Hernández</h1>
-                            <p id="header-subtitle" class="animated fadeIn">Web Developer & Designer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body>
+    <div id="background-particles"></div>
+
+    <div id="line-particles"></div>
+
+    <div class="flying-car-container">
+        <span>DON'T PANIC</span>
+        <img class="flying-car" src="images/car.png" alt="Car">
+    </div>
+
+    <div class="icon-wrapper">
+        <div class="icon right-planet">
+            <div class="moon top"></div>
+            <div class="planet"></div>
+            <div class="ring"></div>
+            <div class="ring planet"></div>
+            <div class="planetoid"></div>
+            <div class="moon bottom"></div>
         </div>
-    </section>
+    </div>
 
-
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 id="section-title"><i class="fa fa-question-circle"></i> About</h2>
-                    <br>
-                    <p>25 years old developer from Colombia, currently working as head developer for Santa Marta Flowers S.A.S. I like music, web designing, coding and maths. Mostly spend my free time developing Java applications and websites. Take a look at the projects section to see some of the stuff I have worked on.</p>
-                    <br>
-                    <section id="skills">
-                        <br>
-                        <h2 id="section-title"><i class="fa fa-star"></i> Skills</h2>
-                        <br>
-                        <ul>
-                            <li>Fluent in English, Spanish and German.</li>
-                            <li>Love to work with Java, Javascript, HTML and CSS.</li>
-                            <li>Also know some C++ and Python. Know very little PHP.</li>
-                        </ul>
-                    </section>
-                    <br><br>
-                </div>
-            </div>
+    <div class="center logo-center">
+        <div class="element">
+            <img class="logo" src="images/logo.png">
         </div>
-    </section>
+    </div>
 
-
-    <section id="projects">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 id="section-title"><i class="fa fa-terminal"></i> Projects</h2>
-                    <h4>A showcase of some projects I have worked on.</h4>
-                    <br><br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="project-item">
-                        <a id="social-link" href="" target="_blank">
-                            <img class="circular-img" src="images/flowersx.png" alt="FlowersX">
-                        </a>
-                        <div class="project-container">
-                            <h1>FlowersX</h1>
-                            <p class="project-type"> (Closed Source) </p>
-                            <p class="project-title">An enterprise system aiming to assist in the exportation of flowers from Colombia to the US.</p>
-                            <p> Developer </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-item">
-                        <a id="social-link" href="https://soundcloud.com/lediscrete" target="_blank">
-                            <img class="circular-img" src="images/lediscrete.jpg" alt="Le Discrete Records">
-                        </a>
-                        <div class="project-container">
-                            <h1>Le Discrete Records</h1>
-                            <a class="orange-link" id="social-link" href="https://soundcloud.com/lediscrete" target="_blank">
-                                <p class="project-type"> (Recording Label) </p>
-                            </a>
-                            <p class="project-title">A recording label focused on classical and extreme music.</p>
-                            <p> Founder </p>
-                            <a id="social-link" href="https://soundcloud.com/lediscrete" target="_blank"><i class="fa fa-globe"></i></a>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-item">
-                        <a id="social-link" href="https://fehernandez12.github.io" target="_blank">
-                            <img class="circular-img" src="images/neko.png" alt="Neko">
-                        </a>
-                        <div class="project-container">
-                            <h1>My Website</h1>
-                            <a class="orange-link" id="social-link" href="https://github.com/fehernandez12/fehernandez12.github.io" target="_blank">
-                                <p class="project-type"> (Website) </p>
-                            </a>
-                            <p class="project-title">A personal website to showcase some projects and information about myself.</p>
-                            <p> Creator / Developer </p>
-                            <a id="social-link" href="https://fehernandez12.github.io" target="_blank"><i class="fa fa-globe"></i></a>
-                            <a id="social-link" href="https://fehernandez12.github.io" target="_blank"><i class="fa github-icon"></i></a>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="center text-center">
+        <div class="element">
+            <p>Hobbyist Developer</p>
         </div>
-    </section>
+    </div>
 
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 id="section-title"><i class="fa fa-send"></i> Contact</h2>
-                    <h4>If you want to contact me for any reason, feel free to send an email.</h4>
-                    <br>
-                    <div class="col-md-3">
-                        <span class="contact-title"><i class="fa fa-envelope"></i> Email</span>
-                        <a class="orange-link" id="social-link" href="mailto:feehernandezba@gmail.com" target="_blank">
-                            <p>feehernandezba@gmail.com</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <span class="contact-title"><i class="fa fa-facebook"></i> Facebook</span>
-                        <a class="orange-link" id="social-link" href="https://facebook.com/fuchsrules" target="_blank">
-                            <p>Felipe Esteban Hernández</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <span class="contact-title"><img class="custom-contact-icon" src="images/discord-contact.png"> Discord</span>
-                        <a class="orange-link" id="social-link" href="https://discord.gg/sCQPDXe" target="_blank">
-                            <p>@I butter the bread with butter#4810</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <span class="contact-title"><img class="custom-contact-icon" src="images/keybase.png"> Keybase</span>
-                        <a class="orange-link" id="social-link" href="https://keybase.io/deffeater" target="_blank">
-                            <p>deffeater</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="center links">
+        <div class="element container">
+            <a class="link" style="width: 100px;" href="mailto:fehernandezmusic@gmail.com" target="_blank">
+                <p>Contact</p>
+            </a>
+            <span>•</span>
+            <a class="link" href="https://github.com/fehernandez12" target="_blank">
+                <p>Github</p>
+            </a>
+            <span>•</span>
+            <a class="link" href="https://discord.gg/pqJ9Dtz" target="_blank">
+                <p>Discord</p>
+            </a>
+            <span>•</span>
+            <a class="link" href="https://keybase.io/deffeater" target="_blank">
+                <p>Keybase</p>
+            </a>
         </div>
-    </section>
-
-
-    <footer id="footer">
-        <div class="footer-line">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p>Copyright (c) 2019 Felipe Hernández, All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" title="Back to top" data-toggle="tooltip" data-placement="left">
-        <span class="fa fa-arrow-up"></span>
-    </a>
+    </div>
 
     <script>
         (function(i, s, o, g, r, a, m) {
@@ -230,8 +104,10 @@
 
     </script>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/anime.min.js"></script>
+
+    <script src="js/particles.min.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 

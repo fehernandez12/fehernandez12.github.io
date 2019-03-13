@@ -1,0 +1,172 @@
+$dark: rgb(24, 18, 10);
+$gold: #a78247;
+$borderwidth: 0.1vw;
+$animationtime: 5s;
+
+@mixin bordered(){
+  border: $borderwidth solid $gold;
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  border: 0;
+  overflow: visible;
+
+  & div {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    @include bordered();
+    overflow: hidden;
+    &:before, &:after{
+      content: '';
+      display: block;
+      position: absolute;
+    }
+  }
+  
+  & .icon {
+    position: relative;
+    display: inline-block;
+    width: 12vw;
+    height: 12vw;
+    margin: 2.5vw 1.5vw;
+    border: 0;
+    overflow: visible;
+    
+    & .moon, & .planetoid, & .planet {
+      border-radius: 50%;
+      background: $dark;
+    }
+    
+    &.right-planet {
+      
+      & .moon{
+        &.top{
+          top: 15%;
+          left: 10%;
+          width: 8%;
+          height: 8%;
+          animation: moontop $animationtime ease 0s infinite;
+        }
+        &.bottom{
+          top: 85%;
+          right: 5%;
+          width: 1%;
+          height: 1%;
+          animation: moonbottom $animationtime ease 0s infinite;
+        }
+      }
+      
+      & .planet {
+        top: 25%;
+        left: 24%;
+        width: 63%;
+        height: 63%;
+        background: #8d3026;
+        background: -webkit-linear-gradient(to right, #bd3f31, #000000);
+        background: linear-gradient(to right, #bd3f31, #000000);
+      }
+      
+      & .ring {
+        top: 45%;
+        left: 15%;
+        width: 80%;
+        height: 25%;
+        border-radius: 50%;
+        border-color: transparent $gold $gold $gold;
+        transform: rotate(17deg);
+        animation: ring $animationtime linear 0s infinite alternate;
+        &.planet{
+          top: 62.5%;
+          left: 40%;
+          width: 8%;
+          height: 8%;
+          border-color: $gold;
+          background: $dark;
+          z-index: 1;
+          overflow: visible;
+          animation: ringplanet $animationtime ease 0s infinite;
+          &:after{
+            top: -55%;
+            left: 80%;
+            width: 1%;
+            height: 1%;
+            @include bordered();
+            border-radius: 50%;
+          }
+        }
+      }
+      
+      & .planetoid {
+        display: none;
+        top: 25%;
+        left: 70%;
+        width: 20%;
+        height: 20%;
+        overflow: visible;
+        background: $dark;
+        &:before{
+          top: -25%;
+          left: -25%;
+          width: 150%;
+          padding-top: 150%;
+          @include bordered();
+          border-radius: 50%;
+          border-color: $gold $gold transparent transparent;
+          transform: rotate(55deg);
+          background: transparent;
+        }
+        &:after{
+          top: 100%;
+          left: 5%;
+          width: 30%;
+          padding-top: 15%;
+          @include bordered();
+          border-radius: 50%;
+          border-color: transparent transparent $gold transparent;
+          transform: rotate(35deg);
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+@keyframes moontop{
+  0% {top: 15%;left: 10%;z-index:0;}
+  49% {top: 60%;left: 95%;z-index:0;}
+  50% {top: 60%;left: 95%;z-index:1;}
+  99% {top: 15%;left: 10%;z-index:1;}
+  100% {top: 15%;left: 10%;z-index:0;}
+}
+
+@keyframes moonbottom{
+  0% {top: 85%;left: 95%;z-index:0;}
+  49% {top: 40%;left: 5%;z-index:0;}
+  50% {top: 40%;left: 5%;z-index:-1;}
+  99% {top: 85%;left: 95%;z-index:-1;}
+  100% {top: 85%;left: 95%;z-index:0;}
+}
+
+@keyframes ring{
+  0% {transform:rotate(10deg);}
+  100% {transform:rotate(30deg);}
+}
+
+@keyframes ringplanet{
+  0% {transform:rotate(0deg);}
+  100% {transform:rotate(360deg);}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .icon-wrapper {
+    & .icon {
+      width: 25vw;
+      height: 25vw;
+    }
+  }
+}

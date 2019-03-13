@@ -2,34 +2,8 @@
   Created by TheRacingLion (https://trlcs.com/) - 2019
   -*Read LICENSE to know more about permissions*-
 */
-/* Variables */
-/* Global SCSS */
-body, html {
-  overflow: hidden;
-}
 
-html {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-body {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  line-height: 20px;
-  color: #999999;
-  font-size: 16px;
-  background-color: #111111;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: #999999;
-}
+@import 'global';
 
 .animated {
   -webkit-animation-duration: 2.5s;
@@ -41,21 +15,29 @@ a {
 }
 
 @-webkit-keyframes flash {
-  from, 50%, to {
+  from,
+  50%,
+  to {
     opacity: 1;
   }
-  25%, 75% {
+  25%,
+  75% {
     opacity: 0;
   }
 }
+
 @keyframes flash {
-  from, 50%, to {
+  from,
+  50%,
+  to {
     opacity: 1;
   }
-  25%, 75% {
+  25%,
+  75% {
     opacity: 0;
   }
 }
+
 .flash {
   -webkit-animation-name: flash;
   animation-name: flash;
@@ -97,5 +79,3 @@ a:active {
 a:hover {
   color: yellow;
 }
-
-/*# sourceMappingURL=404.css.map */
