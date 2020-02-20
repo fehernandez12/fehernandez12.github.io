@@ -202,9 +202,9 @@ var particles
 // Submarino
 var submarineAnim = anime({
     targets: ".submarine-container",
-    translateX: [-50, 1500],
-    translateY: [200, -50],
-    duration: 20000,
+    translateX: [-50, 1800],
+    translateY: [200, 200],
+    duration: 50000,
     easing: "linear",
     loop: true,
     delay: 20000
