@@ -214,3 +214,19 @@ canvas {
     animation-fill-mode: forwards;
     animation-duration: 2s;
 }
+.submarine-container {
+    position: absolute;
+}
+.submarine-container span {
+    display: none;
+    width: 75px;
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    font-size: 8px;
+}
+.submarine {
+    position: absolute;
+    max-height: 20px;
+    max-width: 20px;
+  }
