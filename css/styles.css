@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar|Nixie+One|Overlock|Seaweed+Script&display=swap');
+
+html, body{
+	width:100%; 
+	height:100%; 
+	padding:0px; 
+	margin:0px;
+	overflow: hidden;
+	background: #191d1e; /* Old browsers */
+	background: -moz-linear-gradient(0deg,  #191d1e 50%, #283139 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(50%,#191d1e), color-stop(100%,#283139)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* IE10+ */
+	background: linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191d1e', endColorstr='#283139',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-attachment: fixed
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#projector {
+    position: absolute; 
+  top: 0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+} 
+
+
+.center-item {
+    width: 90%;
+    height: 38em;
+    background-color: rgb(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 21px 46px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 21px 46px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 21px 46px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    backdrop-filter: blur(0px);
+}
+
+.tit-img {
+    height: 9em;
+}
+
+.imagen-titulo {
+    height: 9em;
+    padding: auto;
+}
+
+@keyframes titulo-img {
+    100% {
+        filter: brightness(70%);
+        height: 8.98em;
+    }
+}
+
+.tit-img:hover {
+    animation-name: titulo-img;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cambio-color {
+    0%, 100% {
+        color: #FFFFFF;
+        text-shadow: 0 0 10px #fff, 
+        0 0 20px #fff, 
+        0 0 25px #8fffb4, 
+        0 0 30px #8fffb4, 
+        0 0 35px #8fffb4,
+        0 0 40px #8fffb4,
+        0 0 45px #8fffb4;
+    }
+    20% {
+        color: #FEFEFE;
+        text-shadow: 0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 25px #8BFFB3,
+        0 0 30px #8BFFB3,
+        0 0 35px #8BFFB3,
+        0 0 40px #8BFFB3,
+        0 0 45px #8BFFB3;
+    }
+    40% {
+        color: #FDFDFD;
+        text-shadow: 0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 25px #D5FEE4,
+        0 0 30px #D5FEE4,
+        0 0 35px #D5FEE4,
+        0 0 40px #D5FEE4,
+        0 0 45px #D5FEE4;
+    }
+    60% {
+        color: #FCFCFC;
+        text-shadow: 0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 25px #BBADB1,
+        0 0 30px #BBADB1,
+        0 0 35px #BBADB1,
+        0 0 40px #BBADB1,
+        0 0 45px #BBADB1;
+    }
+    80% {
+        color: #FBFBFB;
+        text-shadow: 0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 25px #FFD6E2,
+        0 0 30px #FFD6E2,
+        0 0 35px #FFD6E2,
+        0 0 40px #FFD6E2,
+        0 0 45px #FFD6E2;
+    }
+}
+
+.title {
+    font-family: 'Codystar', cursive;
+    animation-name: cambio-color;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes titulo-anim {
+    0%, 100% {
+        font-size: 2.5rem;
+    }
+    25% {
+        font-size: 2.55rem;
+    }
+    50% {
+        font-size: 2.5rem;
+    }
+    75% {
+        font-size: 2.45rem;
+    }
+}
+
+.description {
+    font-family: 'Overlock', sans-serif;
+    font-size: 1.3em;
+}
+
+@keyframes rainbow {
+    0%, 100% {
+        color: #FFFFFF;
+    }
+    25% {
+        color: #BBFFFF;
+    }
+    50% {
+        color: #FFBBFF;
+    }
+    75% {
+        color: #FFFFBB;
+    }
+}
+
+.description:hover {
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hr-anim {
+    0%, 100% {
+        border-top: 1px #efefef;
+    }
+    50% {
+        border-top: 1px solid black;
+    }
+}
+
+.hr {
+    border-top: 1px #efefef;
+    animation-name: hr-anim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes links-anim {
+    0% {
+        font-size: 1rem;
+    }
+    100% {
+        font-size: 1.1rem;
+    }
+}
+
+#links:hover {
+    animation-name: links-anim;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
