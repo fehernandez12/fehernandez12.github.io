@@ -208,17 +208,16 @@ var particles
 }());
 
 // Submarino
-var submarineAnim = anime({
-    targets: ".submarine-container",
-    translateX: [-50, 1800],
-    translateY: [200, 200],
-    duration: 50000,
-    easing: "linear",
-    loop: true,
-    delay: 20000
-  });
-
 ready(function(){
+    var submarineAnim = anime({
+        targets: ".submarine-container",
+        translateX: [-50, 1800],
+        translateY: [200, 200],
+        duration: 50000,
+        easing: "linear",
+        loop: true,
+        delay: 20000
+      });
     var submarineEl = document.querySelector(".submarine-container");
     var submarineTooltip = document.querySelector(".submarine-container span");
     submarineEl.onmouseenter = function() {
