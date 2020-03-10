@@ -209,3 +209,16 @@ var submarineAnim = anime({
     loop: true,
     delay: 20000
   });
+
+ready(function(){
+    var submarineEl = document.querySelector(".submarine-container");
+    var submarineTooltip = document.querySelector(".submarine-container span");
+    submarineEl.onmouseenter = function() {
+      submarineAnim.pause();
+      submarineTooltip.style.display = "inline";
+    };
+    submarineEl.onmouseleave = function() {
+      submarineAnim.play();
+      submarineTooltip.style.display = "none";
+    }
+})
