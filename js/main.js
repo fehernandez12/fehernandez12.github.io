@@ -218,8 +218,8 @@ ready(function(){
         loop: true,
         delay: 20000
       });
-    var submarineEl = document.querySelector(".submarine-container");
-    var submarineTooltip = document.querySelector(".submarine-container span");
+    var submarineEl = document.querySelectorAll(".submarine-container");
+    var submarineTooltip = document.querySelectorAll(".submarine-container span");
     submarineEl.onmouseenter = function() {
       submarineAnim.pause();
       submarineTooltip.style.display = "inline";
