@@ -16,8 +16,7 @@ body {
   align-items: center;
   min-width: 100vw;
   min-height: 100vh;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
 }
 .messages {
   overflow: auto;
@@ -40,7 +39,10 @@ body {
   border-bottom-left-radius: 0;
 }
 .bubble.left {
-  background: rgba(42,41,46);
+  background: rgb(42,41,46);
+}
+.bubble.left-day {
+  background: rgba(206,206,206, 0.5);
 }
 .bubble:after {
   content: "";
@@ -73,7 +75,17 @@ body {
   font-size: 2rem;
   line-height: 1rem;
 }
-.bubble .loading b {
+.bubble .loading-day {
+  position: absolute;
+  width: 2.25rem;
+  font-size: 2rem;
+  line-height: 1rem;
+}
+.bubble .loading-day b {
   display: inline-block;
   color: rgba(0,0,0,.5);
+}
+.bubble .loading b {
+  display: inline-block;
+  color: rgba(214,214,214,.5);
 }

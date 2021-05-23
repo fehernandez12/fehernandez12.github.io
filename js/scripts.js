@@ -19,7 +19,7 @@ window.onload = function() {
     'Hey there 👋',
     'I\'m Felipe',
     'I code things for the web',
-    'I\'m currently accepting freelance work.<br> You can contact me <a href="mailto:feehernandezba@gmail.co">here.</a>',
+    'I\'m currently accepting freelance work.<br> You can contact me <a href="mailto:feehernandezba@gmail.com">here.</a>',
     '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/deffeater</a>',
     getCurrentTime(),
     '👾 F.'
@@ -34,15 +34,23 @@ window.onload = function() {
   }
 
   var createBubbleElements = function(message, position) {
+    var time = new Date().getHours();
     var bubbleEl = document.createElement('div');
     var messageEl = document.createElement('span');
     var loadingEl = document.createElement('span');
     bubbleEl.classList.add('bubble');
     bubbleEl.classList.add('is-loading');
     bubbleEl.classList.add('cornered');
-    bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
     messageEl.classList.add('message');
-    loadingEl.classList.add('loading');
+    if (6 <= time && time < 19) {
+      loadingEl.classList.add('loading-day');
+      document.body.style.color = '#000';
+      bubbleEl.classList.add(position === 'right' ? 'right' : 'left-day');
+    } else {
+      loadingEl.classList.add('loading');
+      document.body.style.color = '#FFF';
+      bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
+    }
     messageEl.innerHTML = message;
     loadingEl.innerHTML = loadingText;
     bubbleEl.appendChild(loadingEl);

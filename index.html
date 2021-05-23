@@ -17,6 +17,17 @@
 <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 <body>
   <div class="messages"></div>
+  <script>
+    var currentTime = new Date().getHours();
+    if (document.body) {
+        if (6 <= currentTime && currentTime < 19) {
+            document.body.style.background = "#FFF";
+        }
+        else {
+            document.body.style.background = "#000";
+        }
+    }    
+  </script>
   <script src="js/anime.js"></script>
   <script src="js/scripts.js"></script>
 </body>
