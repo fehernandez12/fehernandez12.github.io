@@ -14,20 +14,16 @@
 <meta property="og:image:height" content="416" />
 <link rel="icon" type="image/png" href="img/favicon.png" />
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 <body>
-  <div class="messages"></div>
-  <script>
-    var currentTime = new Date().getHours();
-    if (document.body) {
-        if (6 <= currentTime && currentTime < 19) {
-            document.body.style.background = "#FFF";
-        }
-        else {
-            document.body.style.background = "#000";
-        }
-    }    
-  </script>
+  <div class="container">
+    <div class="row h-100 w-100">
+      <div class="col-12 col-lg-8 offset-lg-2 pt-3 pt-lg-0">
+        <div class="messages"></div>
+      </div>
+    </div>
+  </div>
   <script src="js/anime.js"></script>
   <script src="js/scripts.js"></script>
 </body>

@@ -1,5 +1,7 @@
 window.onload = function() {
 
+  const width = Math.max(document.documentElement.clientWidth);
+
   var messagesEl = document.querySelector('.messages');
   var typingSpeed = 20;
   var loadingText = '<b>•</b><b>•</b><b>•</b>';
@@ -199,7 +201,6 @@ window.onload = function() {
     ++messageIndex;
     setTimeout(sendMessages, (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + anime.random(900, 1200));
   }
-
   sendMessages();
 
 }

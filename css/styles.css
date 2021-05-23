@@ -18,11 +18,25 @@ body {
   min-height: 100vh;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
 }
-.messages {
-  overflow: auto;
-  width: 100vw;
-  max-height: 100vh;
-  padding: 1rem .9rem;
+@media (min-width: 600px) {
+  .messages {
+    overflow: auto;
+    width: 100vw;
+    max-height: 100vh;
+    padding: 1rem .9rem;
+  }
+}
+@media (min-width: 1200px) {
+  .messages {
+    overflow: auto;
+    width: 100%;
+    max-height: 100%;
+    padding: 1rem .9rem;
+  }
+}
+.macbook-bg {
+  background-image: url(../img/macbook-pro.png);
+  background-size: auto; 
 }
 .bubble {
   overflow: hidden;
