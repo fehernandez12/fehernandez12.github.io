@@ -15,15 +15,39 @@ window.onload = function() {
     if (current >= 22 || current < 5) return 'Have a good night';
   }
 
+  var getCurrentTimeEs = function() {
+    var date = new Date();
+    var hours =  date.getHours();
+    var minutes =  date.getMinutes();
+    var current = hours + (minutes * .01);
+    if (current >= 5 && current < 19) return '¡Ten un gran día!';
+    if (current >= 19 && current < 22) return '¡Buena tarde!';
+    if (current >= 22 || current < 5) return '¡Que tengas una gran noche!';
+  }
+  
+
   var messages = [
     'Hey there 👋',
     'I\'m Felipe',
     'I code things for the web',
+    'To put it short, I\'m a developer 🤩',
     'I\'m currently accepting freelance work.<br> You can contact me <a href="mailto:feehernandezba@gmail.com">here.</a>',
     '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/deffeater</a>',
     getCurrentTime(),
     '👾 F.'
   ]
+
+  var messages_es = [
+    '¡Hola! 👋',
+    'Soy Felipe',
+    'Escribo código para la web',
+    'En pocas palabras, soy desarrollador 🤩',
+    'Estoy aceptando comisiones y freelances.<br>Puedes contactarme <a href="mailto:feehernandezba@gmail.com">aquí.</a>',
+    '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/deffeater</a>',
+    getCurrentTimeEs(),
+    '👾 F.'
+  ]
+  
 
   var getFontSize = function() {
     return parseInt(getComputedStyle(document.body).getPropertyValue('font-size'));
@@ -164,7 +188,12 @@ window.onload = function() {
   }
 
   var sendMessages = function() {
-    var message = messages[messageIndex];
+    var language = navigator.languages && navigator.languages[0] || navigator.language || navigator.userLanguage;
+    if (language == 'es-ES') {
+      var message = messages_es[messageIndex];
+    } else {
+      var message = messages[messageIndex];
+    }
     if (!message) return;
     sendMessage(message);
     ++messageIndex;
