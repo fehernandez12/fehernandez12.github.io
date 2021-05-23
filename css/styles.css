@@ -40,7 +40,7 @@ body {
   border-bottom-left-radius: 0;
 }
 .bubble.left {
-  background: rgba(42,41,46,0.50);
+  background: rgba(42,41,46);
 }
 .bubble:after {
   content: "";
