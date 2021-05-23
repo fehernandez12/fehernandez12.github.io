@@ -1,232 +1,79 @@
-@import url('https://fonts.googleapis.com/css?family=Codystar|Overlock&display=swap');
-
-html, body{
-	width:100%; 
-	height:100%; 
-	padding:0px; 
-	margin:0px;
-	overflow: hidden;
-	background: #191d1e; /* Old browsers */
-	background: -moz-linear-gradient(0deg,  #191d1e 50%, #283139 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(50%,#191d1e), color-stop(100%,#283139)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* IE10+ */
-	background: linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191d1e', endColorstr='#283139',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	background-attachment: fixed
+:root { 
+  font-size: 1.125rem; 
+  color: rgb(214,214,214);
 }
-
-* {
-    box-sizing: border-box;
+@media (min-width: 600px) { :root { font-size: 1.5rem; } }
+@media (min-width: 900px) { :root { font-size: 1.75rem; } }
+@media (min-width: 1200px) { :root { font-size: 2rem; } }
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-#projector {
-    position: absolute; 
-  top: 0px;
-  left: 0px;
-  width:100%;
-  height:100%;
-} 
-
-
-.center-item {
-    width: 90%;
-    height: 38em;
-    background-color: rgb(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 0px 21px 46px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 0px 21px 46px rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 21px 46px rgba(0,0,0,0.3);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-    margin: auto;
-    padding: auto;
-    backdrop-filter: blur(0px);
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #000;
 }
-
-.tit-img {
-    height: 9em;
+.messages {
+  overflow: auto;
+  width: 100vw;
+  max-height: 100vh;
+  padding: 1rem .9rem;
 }
-
-.imagen-titulo {
-    height: 9em;
-    padding: auto;
+.bubble {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 0 .125rem 0;
+  padding: .5rem .85rem;
+  line-height: 1.25rem;
+  border-radius: 1.25rem;
+  transform-origin: 0 100%;
+  vertical-align: middle;
+  transition: border-radius .25s ease-out .075s;
 }
-
-@keyframes titulo-img {
-    100% {
-        filter: brightness(70%);
-        height: 8.98em;
-    }
+.bubble.left.cornered {
+  border-bottom-left-radius: 0;
 }
-
-.tit-img:hover {
-    animation-name: titulo-img;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+.bubble.left {
+  background: rgba(42,41,46,0.50);
 }
-
-@keyframes cambio-color {
-    0%, 100% {
-        color: #FFFFFF;
-        text-shadow: 0 0 5px #fff, 
-        0 0 10px #fff, 
-        0 0 12px #8fffb4, 
-        0 0 15px #8fffb4, 
-        0 0 17px #8fffb4,
-        0 0 20px #8fffb4,
-        0 0 22px #8fffb4;
-    }
-    20% {
-        color: #FEFEFE;
-        text-shadow: 0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 12px #8BFFB3,
-        0 0 15px #8BFFB3,
-        0 0 17px #8BFFB3,
-        0 0 20px #8BFFB3,
-        0 0 22px #8BFFB3;
-    }
-    40% {
-        color: #FDFDFD;
-        text-shadow: 0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 12px #D5FEE4,
-        0 0 15px #D5FEE4,
-        0 0 17px #D5FEE4,
-        0 0 20px #D5FEE4,
-        0 0 22px #D5FEE4;
-    }
-    60% {
-        color: #FCFCFC;
-        text-shadow: 0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 12px #BBADB1,
-        0 0 15px #BBADB1,
-        0 0 17px #BBADB1,
-        0 0 20px #BBADB1,
-        0 0 22px #BBADB1;
-    }
-    80% {
-        color: #FBFBFB;
-        text-shadow: 0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 12px #FFD6E2,
-        0 0 15px #FFD6E2,
-        0 0 17px #FFD6E2,
-        0 0 20px #FFD6E2,
-        0 0 22px #FFD6E2;
-    }
+.bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -.5rem;
+  width: .5rem;
+  height: .5rem;
+  background-image: url(../img/corner.svg);
+  background-size: .5rem .5rem;
+  background-position: .5rem 0;
+  background-repeat: no-repeat;
+  transition: background-position .15s ease-in;
 }
-
-.title {
-    font-family: 'Codystar', cursive;
-    animation-name: cambio-color;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
+.bubble.cornered:after {
+  background-position: 0 0;
 }
-
-@keyframes titulo-anim {
-    0%, 100% {
-        font-size: 2.5rem;
-    }
-    25% {
-        font-size: 2.55rem;
-    }
-    50% {
-        font-size: 2.5rem;
-    }
-    75% {
-        font-size: 2.45rem;
-    }
+.bubble span {
+  display: block;
 }
-
-.description {
-    font-family: 'Overlock', sans-serif;
-    font-size: 1.3em;
+.bubble span.message {
+  opacity: 0;
 }
-
-@keyframes rainbow {
-    0%, 100% {
-        color: #FFFFFF;
-    }
-    25% {
-        color: #BBFFFF;
-    }
-    50% {
-        color: #FFBBFF;
-    }
-    75% {
-        color: #FFFFBB;
-    }
+.bubble a {
+  color: #0076FF;
 }
-
-.description:hover {
-    animation-name: rainbow;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+.bubble .loading {
+  position: absolute;
+  width: 2.25rem;
+  font-size: 2rem;
+  line-height: 1rem;
 }
-
-@keyframes hr-anim {
-    0%, 100% {
-        border-top: 1px #efefef;
-    }
-    50% {
-        border-top: 1px solid black;
-    }
+.bubble .loading b {
+  display: inline-block;
+  color: rgba(0,0,0,.5);
 }
-
-.hr {
-    border-top: 1px #efefef;
-    animation-name: hr-anim;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
-
-.nav-link {
-    text-decoration: none;
-}
-
-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-@keyframes links-anim {
-    0% {
-        font-size: 1rem;
-    }
-    100% {
-        font-size: 1.1rem;
-    }
-}
-
-#links:hover {
-    animation-name: links-anim;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-}
-.submarine-container {
-    position: absolute;
-}
-.submarine-container span {
-    display: none;
-    width: 75px;
-    position: absolute;
-    top: -20px;
-    left: -30px;
-    font-size: 8px;
-}
-.submarine {
-    position: absolute;
-    max-height: 20px;
-    max-width: 20px;
-  }
