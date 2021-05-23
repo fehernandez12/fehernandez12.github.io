@@ -72,10 +72,12 @@ window.onload = function() {
     bubbleEl.classList.add('cornered');
     messageEl.classList.add('message');
     if (6 <= time && time < 19) {
+      messageEl.classList.add('background-day');
       loadingEl.classList.add('loading-day');
       document.body.style.color = '#000';
       bubbleEl.classList.add(position === 'right' ? 'right' : 'left-day');
     } else {
+      messageEl.classList.add('background-night');
       loadingEl.classList.add('loading');
       document.body.style.color = '#FFF';
       bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
