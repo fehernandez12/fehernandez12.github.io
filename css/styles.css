@@ -1,22 +1,7 @@
-:root { 
-  font-size: 1rem; 
-  color: rgb(214,214,214);
-}
-@media (min-width: 600px) {
- :root { 
-    font-size: 1.25rem; 
-  } 
-}
-@media (min-width: 900px) {
- :root {
-    font-size: 1.5rem; 
-  } 
-}
-@media (min-width: 1200px) {
- :root {
-    font-size: 1.75rem; 
-  } 
-}
+:root { font-size: 1.125rem; }
+@media (min-width: 600px) { :root { font-size: 1.5rem; } }
+@media (min-width: 900px) { :root { font-size: 1.75rem; } }
+@media (min-width: 1200px) { :root { font-size: 2rem; } }
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -28,79 +13,14 @@ body {
   align-items: center;
   min-width: 100vw;
   min-height: 100vh;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #FFF;
 }
-@media (min-width: 576px) {
-  .messages {
-    overflow: auto;
-    width: 100vw;
-    max-height: 100vh;
-    padding: 1rem .9rem;
-  }
-}
-@media (min-width: 768px) {
-  .messages {
-    overflow: auto;
-    width: 100%;
-    height: 100%;
-    padding: 1rem .9rem;
-  }
-}
-#phone {
-  background-image: url(../img/iphone.png);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
-@media (min-width: 1px) {
-  #phone {
-    padding-top: 30%;
-    padding-left: 10%;
-    margin: auto;
-  }
-  .messages {
-    max-width: 90%;
-  }
-}
-@media (min-width: 576px) {
-  #phone {
-    padding-top: 25%;
-    padding-left: 7%;
-    margin: auto;
-  }
-  .messages {
-    max-width: 90%;
-  }
-}
-
-@media (min-width: 768px) {
-  #phone {
-    padding-top: 25%;
-    padding-left: 6%;
-    margin: auto;
-  }
-  .messages {
-    max-width: 90%;
-  }
-}
-@media (min-width: 992px) {
-  #phone {
-    padding-top: 21%;
-    padding-left: 5%;
-    margin: auto;
-  }
-  .messages {
-    max-width: 90%;
-  }
-}
-@media (min-width: 1200px) {
-  #phone {
-    padding-top: 17%;
-    padding-left: 4%;
-    margin: auto;
-  }
-  .messages {
-    max-width: 90%;
-  }
+.messages {
+  overflow: auto;
+  width: 100vw;
+  max-height: 100vh;
+  padding: 1rem .9rem;
 }
 .bubble {
   overflow: hidden;
@@ -117,10 +37,7 @@ body {
   border-bottom-left-radius: 0;
 }
 .bubble.left {
-  background: rgb(42,41,46);
-}
-.bubble.left-day {
-  background: rgba(206,206,206, 0.5);
+  background: rgba(206,206,206,0.50);
 }
 .bubble:after {
   content: "";
@@ -129,16 +46,11 @@ body {
   left: -.5rem;
   width: .5rem;
   height: .5rem;
+  background-image: url(../img/corner.svg);
   background-size: .5rem .5rem;
   background-position: .5rem 0;
-  background-image: url(../img/corner-day.svg);
   background-repeat: no-repeat;
   transition: background-position .15s ease-in;
-}
-.background-day {
-}
-.background-night {
-  background-image: url(../img/corner.svg);
 }
 .bubble.cornered:after {
   background-position: 0 0;
@@ -158,17 +70,7 @@ body {
   font-size: 2rem;
   line-height: 1rem;
 }
-.bubble .loading-day {
-  position: absolute;
-  width: 2.25rem;
-  font-size: 2rem;
-  line-height: 1rem;
-}
-.bubble .loading-day b {
-  display: inline-block;
-  color: rgba(0,0,0,.5);
-}
 .bubble .loading b {
   display: inline-block;
-  color: rgba(214,214,214,.5);
+  color: rgba(0,0,0,.5);
 }
