@@ -60,12 +60,29 @@ window.onload = function() {
     var bubbleEl = document.createElement('div');
     var messageEl = document.createElement('span');
     var loadingEl = document.createElement('span');
+    var time = new Date().getHours();
+    if (time >= 6 && time < 19) {
+      document.body.style.background = '#FFF';
+    } else {
+      messagesEl.style.color = '#FFF';
+      document.body.style.background = '#000';
+    }
     bubbleEl.classList.add('bubble');
     bubbleEl.classList.add('is-loading');
     bubbleEl.classList.add('cornered');
-    bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
+    if (time >= 6 && time < 19) {
+      bubbleEl.classList.add('light');
+      bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
+    } else {
+      bubbleEl.classList.add('dark');
+      bubbleEl.classList.add(position === 'right' ? 'right' : 'left-dark');
+    }
     messageEl.classList.add('message');
-    loadingEl.classList.add('loading');
+    if (time >= 6 && time < 19) {
+      loadingEl.classList.add('loading');
+    } else {
+      loadingEl.classList.add('loading-dark');
+    }
     messageEl.innerHTML = message;
     loadingEl.innerHTML = loadingText;
     bubbleEl.appendChild(loadingEl);
