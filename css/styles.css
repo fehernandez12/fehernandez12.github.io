@@ -37,7 +37,10 @@ body {
   border-bottom-left-radius: 0;
 }
 .bubble.left {
-  background: rgba(206,206,206,0.50);
+  background: rgb(42,41,46);
+}
+.bubble.left-day {
+  background: rgba(206,206,206, 0.5);
 }
 .bubble:after {
   content: "";
