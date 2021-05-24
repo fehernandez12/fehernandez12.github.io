@@ -12,6 +12,9 @@ window.onload = function() {
     var hours =  date.getHours();
     var minutes =  date.getMinutes();
     var current = hours + (minutes * .01);
+    if (5 < current && current >= 19) {
+      document.body.style.background = '#000';
+    }
     if (current >= 5 && current < 19) return 'Have a great day';
     if (current >= 19 && current < 22) return 'Have a nice evening';
     if (current >= 22 || current < 5) return 'Have a good night';

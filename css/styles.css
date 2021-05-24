@@ -1,10 +1,22 @@
 :root { 
-  font-size: 1.125rem; 
+  font-size: 1rem; 
   color: rgb(214,214,214);
 }
-@media (min-width: 600px) { :root { font-size: 1.5rem; } }
-@media (min-width: 900px) { :root { font-size: 1.75rem; } }
-@media (min-width: 1200px) { :root { font-size: 2rem; } }
+@media (min-width: 600px) {
+ :root { 
+    font-size: 1.25rem; 
+  } 
+}
+@media (min-width: 900px) {
+ :root {
+    font-size: 1.5rem; 
+  } 
+}
+@media (min-width: 1200px) {
+ :root {
+    font-size: 1.75rem; 
+  } 
+}
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -18,7 +30,7 @@ body {
   min-height: 100vh;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
 }
-@media (min-width: 600px) {
+@media (min-width: 576px) {
   .messages {
     overflow: auto;
     width: 100vw;
@@ -26,17 +38,69 @@ body {
     padding: 1rem .9rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .messages {
     overflow: auto;
     width: 100%;
-    max-height: 100%;
+    height: 100%;
     padding: 1rem .9rem;
   }
 }
-.macbook-bg {
-  background-image: url(../img/macbook-pro.png);
-  background-size: auto; 
+#phone {
+  background-image: url(../img/iphone.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+@media (min-width: 1px) {
+  #phone {
+    padding-top: 30%;
+    padding-left: 10%;
+    margin: auto;
+  }
+  .messages {
+    max-width: 90%;
+  }
+}
+@media (min-width: 576px) {
+  #phone {
+    padding-top: 25%;
+    padding-left: 7%;
+    margin: auto;
+  }
+  .messages {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  #phone {
+    padding-top: 25%;
+    padding-left: 6%;
+    margin: auto;
+  }
+  .messages {
+    max-width: 90%;
+  }
+}
+@media (min-width: 992px) {
+  #phone {
+    padding-top: 21%;
+    padding-left: 5%;
+    margin: auto;
+  }
+  .messages {
+    max-width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  #phone {
+    padding-top: 17%;
+    padding-left: 4%;
+    margin: auto;
+  }
+  .messages {
+    max-width: 90%;
+  }
 }
 .bubble {
   overflow: hidden;
