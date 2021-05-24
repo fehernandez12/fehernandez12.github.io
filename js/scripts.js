@@ -1,15 +1,10 @@
-/*
- * This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/.
- * Copyright (c) 2016 Julian Garnier
- */
-
 window.onload = function() {
 
   var messagesEl = document.querySelector('.messages');
   var typingSpeed = 20;
   var loadingText = '<b>•</b><b>•</b><b>•</b>';
   var messageIndex = 0;
+  var language = window.navigator.userLanguage || window.navigator.language;
 
   var getCurrentTime = function() {
     var date = new Date();
@@ -21,14 +16,35 @@ window.onload = function() {
     if (current >= 22 || current < 5) return 'Have a good night';
   }
 
+  var getCurrentTimeES = function() {
+    var date = new Date();
+    var hours =  date.getHours();
+    var minutes =  date.getMinutes();
+    var current = hours + (minutes * .01);
+    if (current >= 6 && current < 16) return '¡Ten un lindo día!';
+    if (current >= 16 && current < 20) return '¡Que tengas una buena tarde!';
+    if (current >= 20 || current < 6) return '¡Te deseo una gran noche!';
+  }
+
   var messages = [
     'Hey there 👋',
     'I\'m Felipe',
     'I code things for the web',
-    'To put it short, I\'m a developer 🤩' ,
+    'To put it short, I\'m a developer 🤓' ,
     'I\'m currently accepting freelance work.<br> You can contact me <a href="mailto:feehernandezba@gmail.com">here.</a>',
     '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/defffeater</a>',
     getCurrentTime(),
+    '👾 F.'
+  ]
+
+  var messages_ES = [
+    '¡Hola! 👋',
+    'Soy Felipe',
+    'Escribo código para la web',
+    'En pocas palabras, soy desarrollador 🤓' ,
+    'Actualmente acepto trabajos freelance.<br> Puedes contactarme <a href="mailto:feehernandezba@gmail.com">aquí.</a>',
+    '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/defffeater</a>',
+    getCurrentTimeES(),
     '👾 F.'
   ]
 
@@ -163,7 +179,11 @@ window.onload = function() {
   }
 
   var sendMessages = function() {
-    var message = messages[messageIndex];
+    if (language == 'es-ES') {
+      var message = messages_ES[messageIndex];
+    } else {
+      var message = messages[messageIndex];
+    }
     if (!message) return;
     sendMessage(message);
     ++messageIndex;
