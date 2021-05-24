@@ -1,6 +1,10 @@
-window.onload = function() {
+/*
+ * This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/.
+ * Copyright (c) 2016 Julian Garnier
+ */
 
-  const width = Math.max(document.documentElement.clientWidth);
+window.onload = function() {
 
   var messagesEl = document.querySelector('.messages');
   var typingSpeed = 20;
@@ -12,47 +16,21 @@ window.onload = function() {
     var hours =  date.getHours();
     var minutes =  date.getMinutes();
     var current = hours + (minutes * .01);
-    if (5 < current && current >= 19) {
-      document.body.style.background = '#000';
-    }
-    if (current >= 5 && current < 19) return 'Have a great day';
+    if (current >= 5 && current < 19) return 'Have a nice day';
     if (current >= 19 && current < 22) return 'Have a nice evening';
     if (current >= 22 || current < 5) return 'Have a good night';
   }
-
-  var getCurrentTimeEs = function() {
-    var date = new Date();
-    var hours =  date.getHours();
-    var minutes =  date.getMinutes();
-    var current = hours + (minutes * .01);
-    if (current >= 5 && current < 19) return '¡Ten un gran día!';
-    if (current >= 19 && current < 22) return '¡Buena tarde!';
-    if (current >= 22 || current < 5) return '¡Que tengas una gran noche!';
-  }
-  
 
   var messages = [
     'Hey there 👋',
     'I\'m Felipe',
     'I code things for the web',
-    'To put it short, I\'m a developer 🤩',
+    'To put it short, I\'m a developer 🤩' ,
     'I\'m currently accepting freelance work.<br> You can contact me <a href="mailto:feehernandezba@gmail.com">here.</a>',
-    '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/deffeater</a>',
+    '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/defffeater</a>',
     getCurrentTime(),
     '👾 F.'
   ]
-
-  var messages_es = [
-    '¡Hola! 👋',
-    'Soy Felipe',
-    'Escribo código para la web',
-    'En pocas palabras, soy desarrollador 🤩',
-    'Estoy aceptando comisiones y freelances.<br>Puedes contactarme <a href="mailto:feehernandezba@gmail.com">aquí.</a>',
-    '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/deffeater</a>',
-    getCurrentTimeEs(),
-    '👾 F.'
-  ]
-  
 
   var getFontSize = function() {
     return parseInt(getComputedStyle(document.body).getPropertyValue('font-size'));
@@ -63,23 +41,15 @@ window.onload = function() {
   }
 
   var createBubbleElements = function(message, position) {
-    var time = new Date().getHours();
     var bubbleEl = document.createElement('div');
     var messageEl = document.createElement('span');
     var loadingEl = document.createElement('span');
     bubbleEl.classList.add('bubble');
     bubbleEl.classList.add('is-loading');
     bubbleEl.classList.add('cornered');
+    bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
     messageEl.classList.add('message');
-    if (6 <= time && time < 19) {
-      loadingEl.classList.add('loading-day');
-      document.body.style.color = '#000';
-      bubbleEl.classList.add(position === 'right' ? 'right' : 'left-day');
-    } else {
-      loadingEl.classList.add('loading');
-      document.body.style.color = '#FFF';
-      bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
-    }
+    loadingEl.classList.add('loading');
     messageEl.innerHTML = message;
     loadingEl.innerHTML = loadingText;
     bubbleEl.appendChild(loadingEl);
@@ -193,17 +163,13 @@ window.onload = function() {
   }
 
   var sendMessages = function() {
-    var language = navigator.languages && navigator.languages[0] || navigator.language || navigator.userLanguage;
-    if (language == 'es-ES') {
-      var message = messages_es[messageIndex];
-    } else {
-      var message = messages[messageIndex];
-    }
+    var message = messages[messageIndex];
     if (!message) return;
     sendMessage(message);
     ++messageIndex;
     setTimeout(sendMessages, (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + anime.random(900, 1200));
   }
+
   sendMessages();
 
 }
