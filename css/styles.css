@@ -55,12 +55,13 @@ body {
   left: -.5rem;
   width: .5rem;
   height: .5rem;
-  background-image: url(../img/corner.svg);
+  /*background-image: url(../img/corner.svg);*/
   background-size: .5rem .5rem;
   background-position: .5rem 0;
   background-repeat: no-repeat;
   transition: background-position .15s ease-in;
 }
+
 .bubble.cornered:after {
   background-position: 0 0;
 }
