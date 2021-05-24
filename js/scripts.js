@@ -189,7 +189,7 @@ window.onload = function() {
         marginTop: 0,
         marginLeft: 0,
         begin: function() {
-          if (messageIndex < messages.length) elements.bubble.classList.remove('cornered');
+          elements.bubble.classList.remove('cornered');
         }
       })
     }, loadingDuration - 50);
