@@ -63,11 +63,12 @@ window.onload = function() {
     var time = new Date().getHours();
     if (time >= 6 && time < 19) {
       document.body.style.background = '#FFF';
+      bubbleEl.classList.add('bubble');
     } else {
       messagesEl.style.color = '#FFF';
       document.body.style.background = '#000';
+      bubbleEl.classList.add('bubble-dark');
     }
-    bubbleEl.classList.add('bubble');
     bubbleEl.classList.add('is-loading');
     bubbleEl.classList.add('cornered');
     if (time >= 6 && time < 19) {

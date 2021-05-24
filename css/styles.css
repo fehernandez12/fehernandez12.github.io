@@ -58,7 +58,7 @@ body {
   left: -.5rem;
   width: .5rem;
   height: .5rem;
-  /*background-image: url(../img/corner.svg);*/
+  background-image: url(../img/corner.svg);
   background-size: .5rem .5rem;
   background-position: .5rem 0;
   background-repeat: no-repeat;
@@ -96,6 +96,77 @@ body {
   color: rgba(0,0,0,.5);
 }
 .bubble .loading-dark b {
+  display: inline-block;
+  color: #fff;
+}
+.bubble-dark {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 0 .125rem 0;
+  padding: .5rem .85rem;
+  line-height: 1.25rem;
+  border-radius: 1.25rem;
+  transform-origin: 0 100%;
+  vertical-align: middle;
+  transition: border-radius .25s ease-out .075s;
+}
+.bubble-dark.left.cornered {
+  border-bottom-left-radius: 0;
+}
+.bubble-dark.left-dark.cornered {
+  border-bottom-left-radius: 0;
+}
+.bubble-dark.left {
+  background: rgba(206,206,206,0.50);
+}
+.bubble-dark.left-dark {
+  background: rgba(42,47,51,0.50);
+}
+.bubble-dark:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -.5rem;
+  width: .5rem;
+  height: .5rem;
+  background-image: url(../img/corner-dark.svg);
+  background-size: .5rem .5rem;
+  background-position: .5rem 0;
+  background-repeat: no-repeat;
+  transition: background-position .15s ease-in;
+}
+
+.bubble-dark.cornered:after {
+  background-position: 0 0;
+}
+.bubble-dark span {
+  display: block;
+}
+.bubble-dark span.message {
+  opacity: 0;
+}
+.bubble-dark a {
+  color: #0076FF;
+}
+.bubble-dark .loading {
+  position: absolute;
+  width: 2.25rem;
+  font-size: 2rem;
+  line-height: 1rem;
+}
+
+.bubble-dark .loading-dark {
+  position: absolute;
+  width: 2.25rem;
+  font-size: 2rem;
+  line-height: 1rem;
+}
+
+.bubble-dark .loading b {
+  display: inline-block;
+  color: rgba(0,0,0,.5);
+}
+.bubble-dark .loading-dark b {
   display: inline-block;
   color: #fff;
 }
