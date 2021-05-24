@@ -42,6 +42,9 @@ body {
 .bubble.left.cornered {
   border-bottom-left-radius: 0;
 }
+.bubble.left-dark.cornered {
+  border-bottom-left-radius: 0;
+}
 .bubble.left {
   background: rgba(206,206,206,0.50);
 }
