@@ -49,7 +49,7 @@ body {
   background: rgba(206,206,206,0.50);
 }
 .bubble.left-dark {
-  background: rgba(42,41,46,0.50);
+  background: rgb(42,41,46);
 }
 .bubble:after {
   content: "";
@@ -120,7 +120,7 @@ body {
   background: rgba(206,206,206,0.50);
 }
 .bubble-dark.left-dark {
-  background: rgba(42,41,46,0.50);
+  background: rgb(42,41,46);
 }
 .bubble-dark:after {
   content: "";
