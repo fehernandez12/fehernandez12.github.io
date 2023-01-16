@@ -33,7 +33,6 @@ window.onload = function() {
     'To put it short, I\'m a developer 🤓' ,
     'I\'m currently accepting freelance work.<br> You can contact me <a href="mailto:feehernandezba@gmail.com">here.</a>',
     '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/defffeater</a>',
-    'Or you can read <a target="_blank" href="https://fehernandez.com/blog">my blog 😎</a>, <br>or take a look at <a target="_blank" href="https://fehernandez.com/portfolio/">my portfolio</a>.',
     getCurrentTime(),
     '👾 F.'
   ]
@@ -45,7 +44,6 @@ window.onload = function() {
     'En pocas palabras, soy desarrollador 🤓' ,
     'Actualmente acepto trabajos freelance.<br> Puedes contactarme <a href="mailto:feehernandezba@gmail.com">aquí.</a>',
     '<a target="_blank" href="https://github.com/fehernandez12">github.com/fehernandez12</a><br><a target="_blank" href="https://instagram.com/defffeater">instagram.com/defffeater</a>',
-    'O puedes leer lo que posteo en <a target="_blank" href="https://fehernandez.com/blog">mi blog 😎</a>, <br>o echarle un ojo a <a target="_blank" href="https://fehernandez.com/portfolio/">mi porfafolio</a>.',
     getCurrentTimeES(),
     '👾 F.'
   ]
